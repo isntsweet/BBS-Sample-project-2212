@@ -16,7 +16,7 @@ import javax.servlet.http.Part;
 /**
  * Servlet implementation class Upload
  */
-@WebServlet("/board/upload")
+@WebServlet("/board/testupload")
 @MultipartConfig(fileSizeThreshold = 1024 * 1024 * 1, // 1 MB
 		maxFileSize = 1024 * 1024 * 10, // 10 MB
 		maxRequestSize = 1024 * 1024 * 100 // 100 MB
@@ -60,6 +60,10 @@ public class Upload extends HttpServlet {
 				continue;
 			fileList.add(fileName);
 
+//            ByteArrayInputStream bis = (ByteArrayInputStream) filePart.getInputStream();
+//            byte[] buffer = bis.readAllBytes();
+//            OutputStream fos = new FileOutputStream(tmpPath + File.separator + fileName);
+//            fos.write(buffer);
 			for (Part part : request.getParts()) {
 				part.write(tmpPath + File.separator + fileName);
 			}

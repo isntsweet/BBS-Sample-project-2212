@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
 			<div class="col-sm-3">
                 <img src="../img/avatar_man.png" class="rounded-circle" alt="" width="90%">
                 <p class="mt-3">피할수 없으면 즐겨라</p>
